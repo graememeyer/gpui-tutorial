@@ -20,6 +20,14 @@ gpui = { git = "https://github.com/zed-industries/zed" }
 
 Run `cargo build` to make sure that you are able to build the dependencies. If you're having problems (as I did), refer back to the [installation instructions](00-prerequisites.md#installation).
 
+## Import GPUI
+
+Create a new main.rs file and import gpui:
+
+```rs
+use gpui::*;
+```
+
 ## View
 
 To begin we need to define how we want to present the greeting to Mick Jagger. This is done by defining a [view](dictionary.md#view). A _view_ is the simplest [element](dictionary.md#element) we can use to [render](dictionary.md#render) UI in gpui. It is made up of two parts: (1) data that we will show (i.e., the [state](dictionary.md#state)), (2) the way we present (or [render](dictionary.md#render)) that data to a UI.
