@@ -10,7 +10,7 @@ Instead of saying hi to _everyone_, here we're going to say hello to a famous ro
 
 ## Crate
 
-Create a new crate with `cargo new` and add gpui to your `Cargo.toml` file as a dependency:
+Create a new crate with `cargo init` and add gpui to your `Cargo.toml` file as a dependency:
 
 To use gpui, add a reference to it in the `Cargo.toml` file:
 
