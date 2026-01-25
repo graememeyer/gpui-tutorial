@@ -53,7 +53,7 @@ Now that the data, or [state](dictionary.md#state) we want to show is defined, i
 
 ```rs
 impl Render for Person {
-    fn render(&mut self, _cx: &mut ViewContext<Self>) -> impl IntoElement {
+    fn render(&mut self, _window: &mut Window, _cx: &mut Context<Self>) -> impl IntoElement {
         div()
             .flex()
             .bg(rgb(0x333333))
@@ -79,9 +79,9 @@ We do this inside of the `main` function:
 
 ```rs
 fn main() {
-    App::new().run(|cx: &mut AppContext| {
-        cx.open_window(WindowOptions::default(), |cx| {
-            cx.new_view(|_cx| Person {
+    Application::new().run(|cx: &mut App| {
+        cx.open_window(WindowOptions::default(), |_, cx| {
+            cx.new(|_| Person {
                 first_name: "Mick".into(),
                 last_name: "Jagger".into(),
             })
